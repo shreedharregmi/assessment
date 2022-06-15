@@ -1,0 +1,16 @@
+
+<h3 class="d-flex flex-row my-4 steps">
+	<span class="mr-3">${properties.serialNumber}</span class="mr-3"> 
+	<span class="align-self-center">${properties.sectionHeading}</span>
+</h3>
+<div data-sly-use.info="contryUse.js" class="">
+            	<div class="form-group">
+                    <label for="issue">${properties.question}</label> 
+                    <select class="form-control col-md-4" name="${question.inputName}" name="${properties.inputName}">
+                        <sly data-sly-list.option="${info.dropdownOptions}">
+                        	<option value="${option.value}">${option.key}</option>
+                        </sly>
+                    </select>
+                </div>
+</div>
+

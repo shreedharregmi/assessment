@@ -1,0 +1,25 @@
+
+<sly data-sly-test="${wcmmode.edit || wcmmode.design}"> Edit Form cobtainer Component here </sly>
+<div class="container bg-white report-form">
+	<div class="row">
+		<div class="col-12 col-md-7 px-3 px-md-5">
+			<h1>${properties.heading}</h1>
+			<div class="card mb-3">
+				<div class="card-header">
+					${properties.formHeading}
+				</div>
+				<form id="${properties.formName}">
+					<div class="card-body">
+						<div data-sly-resource="${@path='questions', resourceType='wcm/foundation/components/parsys'}"></div>
+                        <span id="errorMsg" style="color:red"></span>
+						<button data-sly-test="${properties.showSubmitButton == 'true'}" type="submit" class="btn btn-primary btn-sm">${properties.buttonText}</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.js @ categories='abc.register'}"/>
+</sly>
+

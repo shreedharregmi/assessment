@@ -1,0 +1,8 @@
+<sly data-sly-use.newsFeedModel="com.anf.core.models.NewsFeedModel">
+    <div data-sly-list="${newsFeedModel.newsFeed.listChildren}">
+        <img src="${item.urlImage @context='uri'}">
+        <h3 >${item.title}</h3>
+        <span>${item.author} || ${newsFeedModel.date}</span>
+        <div>${item.description}</div>
+    </div>
+</sly>
